@@ -26,7 +26,9 @@ const Header = () => {
         <a href="/resources" className="font-semibold text-sm ml-8">
           Resource Center
         </a>
-        <CTAButton>Get Started</CTAButton>
+        <a href="/resources" className="font-semibold text-sm ml-[45px]">
+          <CTAButton>Get Started</CTAButton>
+        </a>
       </div>
     </div>
   );

@@ -20,10 +20,9 @@ const Breadcrumbs = ({
 }: TBreadCrumbProps) => {
   const paths = usePathname();
   const pathNames = paths.split("/").filter((path) => path);
-  console.log(`${listClasses} ${activeClasses}`);
 
   return (
-    <div className="md:px-14 px-4 py-4 text-secondaryText">
+    <div className="md:px-14 px-4 py-4 text-tertiaryText">
       <ul className={containerClasses}>
         {pathNames.map((link, index) => {
           let href = `/${pathNames.slice(0, index + 1).join("/")}`;

@@ -1,7 +1,8 @@
 import Image from "next/image";
+import CTAButton from "./ui/ctaButton";
 const Header = () => {
   return (
-    <div className="w-full h-20 bg-card px-14 shadow-md flex items-center justify-between">
+    <div className="w-full h-20 bg-card px-14 shadow-md flex items-center justify-between absolute top-0">
       <div className="flex items-center">
         <Image
           src="/images/koinx_logo.png"
@@ -11,12 +12,22 @@ const Header = () => {
         />
       </div>
       <div className="flex items-center">
-        <a href="#" className="text-primary-blue font-semibold text-sm">
-          Sign In
+        <a href="/taxes" className="text-primary-blue font-semibold text-sm">
+          Crypto Taxes
         </a>
-        <a href="#" className="text-primary-blue font-semibold text-sm ml-4">
-          Sign Up
+        <a
+          href="/tools"
+          className="text-primary-blue font-semibold text-sm ml-8"
+        >
+          Free Tools
         </a>
+        <a
+          href="/resources"
+          className="text-primary-blue font-semibold text-sm ml-8"
+        >
+          Resource Center
+        </a>
+        <CTAButton>Get Started</CTAButton>
       </div>
     </div>
   );

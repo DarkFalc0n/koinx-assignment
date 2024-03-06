@@ -13,6 +13,9 @@ const config: Config = {
         card: "var(--card)",
         primaryBlue: "var(--primary-blue)",
       },
+      backgroundImage: {
+        ctaGradient: "var(--cta-gradient)",
+      },
     },
   },
   plugins: [],

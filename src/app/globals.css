@@ -6,6 +6,7 @@
   --background: #eff2f5;
   --card: #ffffff;
   --primary-blue: #0052fe;
+  --cta-gradient: linear-gradient(90deg, #2870ea 0%, #1b4aef 100%);
 }
 
 body {

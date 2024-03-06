@@ -12,6 +12,8 @@ const config: Config = {
         background: "var(--background)",
         card: "var(--card)",
         primaryBlue: "var(--primary-blue)",
+        secondaryText: "var(--secondary-text)",
+        primaryText: "var(--primary-text)",
       },
       backgroundImage: {
         ctaGradient: "var(--cta-gradient)",

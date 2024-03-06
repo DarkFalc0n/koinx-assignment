@@ -7,6 +7,8 @@
   --card: #ffffff;
   --primary-blue: #0052fe;
   --cta-gradient: linear-gradient(90deg, #2870ea 0%, #1b4aef 100%);
+  --secondary-text: #6b7280;
+  --primary-text: #1f2937;
 }
 
 body {

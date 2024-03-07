@@ -5,7 +5,7 @@ const PriceChangeIndicator: FCProps<{ change: number }> = ({
   change,
   className,
 }) => {
-  const truncatedChange = change.toFixed(2);
+  const truncatedChange = change?.toFixed(2);
   const isUpTrend = change >= 0;
   const bgClass = isUpTrend ? "bg-cardGreen" : "bg-cardRed";
   const textClass = isUpTrend ? "text-primaryGreen" : "text-primaryRed";

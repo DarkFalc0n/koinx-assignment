@@ -1,10 +1,12 @@
+"use client";
 import AboutCrypto from "@/components/aboutCrypto";
 import GetStarted from "@/components/getStarted";
+import Recommendations from "@/components/recommendations";
 import SentimentCard from "@/components/sentimentCard";
 import TeamCard from "@/components/teamCard";
 import Tokenomics from "@/components/tokenomics";
 import { CryptoCurrencyContextProvider } from "@/hooks/useCryptoCurrency";
-import React from "react";
+import React, { use } from "react";
 
 export default function CryptocurrenciesLayout({
   children,
@@ -27,6 +29,7 @@ export default function CryptocurrenciesLayout({
           </div>
         </div>
       </div>
+      <Recommendations />
     </CryptoCurrencyContextProvider>
   );
 }

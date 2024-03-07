@@ -7,6 +7,7 @@ import React, { useEffect } from "react";
 import Image from "next/image";
 import CoinTitle from "@/components/ui/coinTitle";
 import PriceChangeIndicator from "@/components/ui/priceChangeIndicator";
+import Recommendations from "@/components/recommendations";
 
 const CoinPage = ({ params }: { params: { coin_id: string } }) => {
   const { setCoinId, coinData } = useCryptoCurrency();

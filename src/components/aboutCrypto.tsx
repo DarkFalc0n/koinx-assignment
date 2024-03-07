@@ -44,14 +44,26 @@ const AboutCrypto = () => {
           text="Calculate your Profits"
           buttonText="Check Now"
           image={
-            <Image src="/images/calc_profits.png" width={128} height={128} />
+            <Image
+              src="/images/calc_profits.png"
+              width={128}
+              height={128}
+              alt={"calculate profits"}
+            />
           }
         />
         <CTACard
           className="bg-yellowOrangeGradient"
           text="Calculate your tax liability"
           buttonText="Check Now"
-          image={<Image src="/images/calc_tax.png" width={128} height={128} />}
+          image={
+            <Image
+              src="/images/calc_tax.png"
+              width={128}
+              height={128}
+              alt={"calculate taxes"}
+            />
+          }
         />
       </div>
       <p>

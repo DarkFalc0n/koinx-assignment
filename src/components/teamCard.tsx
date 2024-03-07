@@ -21,6 +21,7 @@ const TeamCard = () => {
             src="/images/profiles/john_smith.png"
             width={100}
             height={100}
+            alt={"John Smith"}
           />
         }
       />
@@ -33,6 +34,7 @@ const TeamCard = () => {
             src="/images/profiles/elina_williams.png"
             width={100}
             height={100}
+            alt={"Elina Williams"}
           />
         }
       />
@@ -45,6 +47,7 @@ const TeamCard = () => {
             src="/images/profiles/john_smith_2.png"
             width={100}
             height={100}
+            alt={"John Smith"}
           />
         }
       />

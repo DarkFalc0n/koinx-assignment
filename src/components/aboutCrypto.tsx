@@ -1,15 +1,26 @@
+"use client";
 import React from "react";
 import CTACard from "./ui/ctaCard";
 import Image from "next/image";
+import useCryptoCurrency from "@/hooks/useCryptoCurrency";
 
 const AboutCrypto = () => {
-  return (
+  const { coinData } = useCryptoCurrency();
+  return coinData ? (
     <div className="w-full bg-card text-primaryText py-4 px-2 md:p-6 my-5 ">
-      <div className="text-2xl font-semibold">About XXX</div>
+      <div className="text-2xl font-semibold">About {coinData?.name}</div>
       <div className="text-xl md:text-lg text-secondaryText font-semibold my-4">
-        What is XXX
+        What is {coinData?.name}?
       </div>
-      <div>XXX</div>
+      <div>
+        {coinData.name}'s price today is US${coinData?.usd}, with a 24-hour
+        trading volume of ${coinData?.usd_24h_vol}. {coinData.symbol} is{" "}
+        {coinData?.usd_24h_change}% in the last 24 hours. It is currently -7.70%
+        from its 7-day all-time high of $18,366.66, and 3.40% from its 7-day
+        all-time low of $16,394.75. {coinData.symbol} has a circulating supply
+        of 19.24 M {coinData.symbol}
+        and a max supply of 21 M {coinData.symbol}.
+      </div>
       <div className="text-xl md:text-lg text-secondaryText font-semibold my-4">
         Lorem ipsum dolor sit amet
       </div>
@@ -37,7 +48,9 @@ const AboutCrypto = () => {
         fames amet dui. Purus ultrices tincidunt volutpat in eget. Ullamcorper
         dui
       </p>
-      <div className="text-2xl font-semibold my-4">Already holding XXX?</div>
+      <div className="text-2xl font-semibold my-4">
+        Already holding {coinData.name}?
+      </div>
       <div className="flex md:flex-row flex-col justify-between md:gap-8 gap-4 my-2">
         <CTACard
           className="bg-blueGreenGradient"
@@ -73,6 +86,10 @@ const AboutCrypto = () => {
         fames amet dui. Purus ultrices tincidunt volutpat in eget. Ullamcorper
         dui
       </p>
+    </div>
+  ) : (
+    <div className="w-full text-tertiaryText bg-card p-6 flex flex-col text-center justify-center">
+      LOADING...
     </div>
   );
 };

@@ -16,8 +16,8 @@ const TrendingCoins: FCProps = (className) => {
       <div className="w-full font-bold text-2xl md:text-xl md:-order-2 mt-2 mb-5 md:mb-3">
         Trending Coins (24H)
       </div>
-      {trendingCurrency?.slice(0, 3).map((coin) => (
-        <div className="flex justify-between my-4">
+      {trendingCurrency?.slice(0, 3).map((coin, index) => (
+        <div className="flex justify-between my-4" key={index}>
           <div className="flex justify-start">
             <Avatar className="w-8 h-8">
               <AvatarImage src={coin.icon} />

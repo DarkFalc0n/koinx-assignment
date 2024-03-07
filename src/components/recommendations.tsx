@@ -45,6 +45,7 @@ const Recommendations = () => {
                     symbol={recommendation.item.symbol}
                     icon={recommendation.item.small}
                     graph={recommendation.item.data.sparkline}
+                    price={recommendation.item.data.price}
                   />
                 </CarouselItem>
               );
@@ -70,6 +71,7 @@ const Recommendations = () => {
                     symbol={recommendation.item.symbol}
                     icon={recommendation.item.small}
                     graph={recommendation.item.data.sparkline}
+                    price={recommendation.item.data.price}
                   />
                 </CarouselItem>
               );

@@ -15,14 +15,14 @@ const PercentageBar: FCProps<TPercentageBar> = ({
 }) => {
   return (
     <div className="flex grow justify-center">
-      <div className="w-[54px]">{text}</div>
-      <div className={`grow md:w-[360px] w-[100px] h-full mr-4`}>
+      <div className="md:w-[54px] w-[40px]">{text}</div>
+      <div className={`grow md:w-[360px] w-[140px] h-full md:mr-4 mr-2 flex`}>
         <div
           style={{ backgroundColor: color, width: `${percentage}%` }}
-          className={`h-2 my-2 rounded-full`}
+          className={`h-2 my-2 mx-2 rounded-full`}
         ></div>
+        {percentage}%
       </div>
-      {percentage}%
     </div>
   );
 };

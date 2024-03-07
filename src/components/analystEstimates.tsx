@@ -12,7 +12,7 @@ const AnalystEstimates: FCProps = () => {
           </div>
         </div>
       </div>
-      <div className="flex flex-col justify ml-2 h-full text-tertiaryText font-medium shrink">
+      <div className="flex flex-col justify-start md:ml-6 ml-2 h-full text-tertiaryText font-medium shrink">
         <PercentageBar text="Buy" percentage={76} color="#00B386" />
         <PercentageBar text="Hold" percentage={15} color="#C7C8CE" />
         <PercentageBar text="Sell" percentage={9} color="#F7324C" />

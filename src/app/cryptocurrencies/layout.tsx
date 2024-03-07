@@ -5,6 +5,7 @@ import Recommendations from "@/components/recommendations";
 import SentimentCard from "@/components/sentimentCard";
 import TeamCard from "@/components/teamCard";
 import Tokenomics from "@/components/tokenomics";
+import TrendingCoins from "@/components/trendingCoins";
 import { CryptoCurrencyContextProvider } from "@/hooks/useCryptoCurrency";
 import { TrendingCurrencyContextProvider } from "@/hooks/useTrendingCurrency";
 import React, { use } from "react";
@@ -28,6 +29,7 @@ export default function CryptocurrenciesLayout({
             </div>
             <div className="flex flex-col">
               <GetStarted />
+              <TrendingCoins className="mt-4" />
             </div>
           </div>
         </div>

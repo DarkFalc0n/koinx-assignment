@@ -8,6 +8,7 @@ interface ITrendingCurrencyData {
   icon: string;
   graph: string;
   price: string;
+  name: string;
 }
 
 interface ITrendingCurrencyContext {
@@ -39,6 +40,7 @@ export const TrendingCurrencyContextProvider: FCProps = ({ children }) => {
             icon: coin.item.small,
             graph: coin.item.data.sparkline,
             price: coin.item.data.price,
+            name: coin.item.name,
           } as ITrendingCurrencyData;
         })
       );

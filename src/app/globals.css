@@ -2,23 +2,87 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #eff2f5;
-  --card: #ffffff;
-  --primary-blue: #0052fe;
-  --tertiary-text: #6b7280;
-  --secondary-text: #44475b;
-  --primary-text: #1f2937;
-  --primary-green: #0fba83;
-  --primary-red: #f7324c;
-  --card-red: #ffddd8;
-  --card-blue: #e8f4fd;
-  --card-green: #ebf9f4;
-  --cta-gradient: linear-gradient(90deg, #2870ea 0%, #1b4aef 100%);
-  --blue-green-gradient: linear-gradient(135deg, #79f1a4 0%, #0e5cad 100%);
-  --yellow-orange-gradient: linear-gradient(135deg, #ff9865 0%, #ef3031 100%);
+@layer base {
+  :root {
+    --background: #eff2f5;
+    --card: #ffffff;
+    --primary-blue: #0052fe;
+    --tertiary-text: #6b7280;
+    --secondary-text: #44475b;
+    --primary-text: #1f2937;
+    --primary-green: #0fba83;
+    --primary-red: #f7324c;
+    --card-red: #ffddd8;
+    --card-blue: #e8f4fd;
+    --card-green: #ebf9f4;
+    --cta-gradient: linear-gradient(90deg, #2870ea 0%, #1b4aef 100%);
+    --blue-green-gradient: linear-gradient(135deg, #79f1a4 0%, #0e5cad 100%);
+    --yellow-orange-gradient: linear-gradient(135deg, #ff9865 0%, #ef3031 100%);
+    --foreground: 0 0% 3.9%;
+
+    --card-foreground: 0 0% 3.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
+
+    --primary: 0 0% 9%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 0 0% 96.1%;
+    --secondary-foreground: 0 0% 9%;
+
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+
+    --accent: 0 0% 96.1%;
+    --accent-foreground: 0 0% 9%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: 0 0% 3.9%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 0 0% 3.9%;
+    --foreground: 0 0% 98%;
+
+    --card: 0 0% 3.9%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 9%;
+
+    --secondary: 0 0% 14.9%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+
+    --accent: 0 0% 14.9%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 0 0% 83.1%;
+  }
 }
 
-body {
-  background-color: var(--background);
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
 }

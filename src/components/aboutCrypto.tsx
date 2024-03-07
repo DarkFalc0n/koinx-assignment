@@ -13,7 +13,7 @@ const AboutCrypto = () => {
         What is {coinData?.name}?
       </div>
       <div>
-        {coinData.name}'s price today is US${coinData?.usd}, with a 24-hour
+        {coinData.name}&apos;s price today is US${coinData?.usd}, with a 24-hour
         trading volume of ${coinData?.usd_24h_vol}. {coinData.symbol} is{" "}
         {coinData?.usd_24h_change}% in the last 24 hours. It is currently -7.70%
         from its 7-day all-time high of $18,366.66, and 3.40% from its 7-day

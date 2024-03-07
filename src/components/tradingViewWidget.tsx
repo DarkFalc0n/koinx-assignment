@@ -1,7 +1,7 @@
 // TradingViewWidget.jsx
 import useCryptoCurrency from "@/hooks/useCryptoCurrency";
 import { FCProps } from "@/types";
-import React, { useEffect, useRef, memo } from "react";
+import React, { useEffect, useRef, memo, RefObject } from "react";
 
 const TradingViewWidget: FCProps<{ symbol: string }> = ({ symbol }) => {
   const container = useRef();
@@ -30,13 +30,13 @@ const TradingViewWidget: FCProps<{ symbol: string }> = ({ symbol }) => {
           "hide_volume": true,
           "support_host": "https://www.tradingview.com"
         }`;
-    container.current.appendChild(script);
+    (container.current as unknown as HTMLElement)?.appendChild(script);
   }, []);
 
   return (
     <div
       className="tradingview-widget-container mt-4"
-      ref={container}
+      ref={container as unknown as RefObject<HTMLDivElement>}
       style={{ height: "100%", width: "100%" }}
     >
       <div

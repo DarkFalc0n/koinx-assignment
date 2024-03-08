@@ -88,7 +88,7 @@ const AboutCrypto = () => {
       </p>
     </div>
   ) : (
-    <div className="w-full text-tertiaryText bg-card p-6 flex flex-col text-center justify-center">
+    <div className="w-full text-tertiaryText bg-card p-6 h-[950px] flex flex-col text-center justify-center">
       LOADING...
     </div>
   );

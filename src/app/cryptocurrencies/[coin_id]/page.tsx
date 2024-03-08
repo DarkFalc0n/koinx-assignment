@@ -36,7 +36,7 @@ const CoinPage = ({ params }: { params: { coin_id: string } }) => {
       </div>
     </div>
   ) : (
-    <div className="w-full text-tertiaryText bg-card p-6 flex flex-col text-center justify-center">
+    <div className="w-full text-tertiaryText h-[700px] bg-card p-6 flex flex-col text-center justify-center">
       LOADING...
     </div>
   );

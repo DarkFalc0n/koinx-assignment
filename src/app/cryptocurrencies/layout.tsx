@@ -22,10 +22,10 @@ export default function CryptocurrenciesLayout({
           <div className="md:flex-row flex-col flex justify-between gap-5">
             <div className="grow min-h-10">
               {children}
+              <SentimentCard />
               <AboutCrypto />
               <Tokenomics />
               <TeamCard />
-              <SentimentCard />
             </div>
             <div className="flex flex-col">
               <GetStarted />

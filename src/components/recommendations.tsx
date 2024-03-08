@@ -11,8 +11,6 @@ import { useTrendingCurrency } from "@/hooks/useTrendingCurrency";
 
 const Recommendations = () => {
   const { trendingCurrency } = useTrendingCurrency();
-  console.log("trendingCurrency", trendingCurrency);
-
   return (
     <div className="w-full bg-card md:px-14 px-4 md:pt-20">
       <div className="text-2xl font-semibold mt-6">You may also Like</div>

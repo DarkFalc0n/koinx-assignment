@@ -1,7 +1,9 @@
-import React from "react";
+"use client";
+import { useEffect } from "react";
 
-const page = () => {
-  return <div></div>;
-};
-
-export default page;
+export default function Home() {
+  useEffect(() => {
+    window.location.href = "/cryptocurrencies/bitcoin";
+  });
+  return <main></main>;
+}

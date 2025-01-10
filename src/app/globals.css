@@ -18,6 +18,16 @@
     --cta-gradient: linear-gradient(90deg, #2870ea 0%, #1b4aef 100%);
     --blue-green-gradient: linear-gradient(135deg, #79f1a4 0%, #0e5cad 100%);
     --yellow-orange-gradient: linear-gradient(135deg, #ff9865 0%, #ef3031 100%);
+    --graph-gradient: linear-gradient(
+      90deg,
+      #ff4949 0%,
+      #ff4e11 15.34%,
+      #fc870a 30.45%,
+      #ffaf11 48.68%,
+      #c2cb21 62.75%,
+      #11eb68 100.03%
+    );
+
     --foreground: 0 0% 3.9%;
 
     --card-foreground: 0 0% 3.9%;

@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react";
 
 const GetStarted = () => {
   return (
-    <div className="bg-primaryBlue md:w-[426px] w-full text-card flex flex-col md:px-12 px-3 justify-center rounded-2xl md:pb-24 pb-6 md:pt-8 pt-6">
+    <div className="bg-primaryBlue md:w-[26.875rem] w-full text-card flex flex-col md:px-12 px-3 justify-center rounded-2xl md:pb-24 pb-6 md:pt-8 pt-6">
       <GetStartedSvg />
       <div className="w-full text-center font-bold text-2xl md:text-xl md:-order-2 mt-2 mb-5 md:mb-3">
         Get Started with KoinX for FREE

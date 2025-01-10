@@ -10,7 +10,7 @@ const TrendingCoins: FCProps = (className) => {
   return (
     <div
       className={cn(
-        "bg-card md:w-[426px] w-fulltext-primaryText flex flex-col md:px-6 px-3 justify-evenly rounded-2xl md:pb-6 md:pt-8 pt-6 md:mt-4 mt-4",
+        "bg-card md:w-[26.875rem] w-fulltext-primaryText flex flex-col md:px-6 px-3 justify-evenly rounded-2xl md:pb-6 md:pt-8 pt-6 md:mt-4 mt-4",
         className
       )}
     >
@@ -18,19 +18,21 @@ const TrendingCoins: FCProps = (className) => {
         Trending Coins (24H)
       </div>
       {trendingCurrency?.slice(0, 3).map((coin, index) => {
-        const truncatedName = coin.name.length > 10 ? coin.name.slice(0, 10) + '...' : coin.name;
+        const truncatedName =
+          coin.name.length > 10 ? coin.name.slice(0, 10) + "..." : coin.name;
         return (
-        <div className="flex justify-between my-4" key={index}>
-          <div className="flex justify-start">
-            <Avatar className="w-8 h-8">
-              <AvatarImage src={coin.icon} />
-            </Avatar>
-            <div className="text-base mt-1 ml-4">{truncatedName}</div>
-            <div className="text-base mt-1 ml-4">({coin.symbol})</div>
+          <div className="flex justify-between my-4" key={index}>
+            <div className="flex justify-start">
+              <Avatar className="w-8 h-8">
+                <AvatarImage src={coin.icon} />
+              </Avatar>
+              <div className="text-base mt-1 ml-4">{truncatedName}</div>
+              <div className="text-base mt-1 ml-4">({coin.symbol})</div>
+            </div>
+            <PriceChangeIndicator change={coin.change} className="mt-0" />
           </div>
-          <PriceChangeIndicator change={coin.change} className="mt-0" />
-        </div>
-      )})}
+        );
+      })}
     </div>
   );
 };

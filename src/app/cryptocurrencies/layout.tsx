@@ -19,9 +19,9 @@ export default function CryptocurrenciesLayout({
   return (
     <CryptoCurrencyContextProvider>
       <TrendingCurrencyContextProvider>
-        <div className="md:px-14 px-4">
+        <div className="md:px-14 px-4 md:pr-14 lg:pr-28">
           <div className="md:flex-row flex-col flex justify-between gap-5">
-            <div className="grow min-h-10">
+            <div className="md:flex-grow">
               {children}
               <PerformanceCard />
               <SentimentCard />
@@ -29,7 +29,7 @@ export default function CryptocurrenciesLayout({
               <Tokenomics />
               <TeamCard />
             </div>
-            <div className="flex flex-col">
+            <div className="flex flex-col md:w-96">
               <GetStarted />
               <TrendingCoins className="mt-4" />
             </div>

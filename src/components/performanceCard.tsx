@@ -3,7 +3,25 @@ import useCryptoCurrency from "@/hooks/useCryptoCurrency";
 import { FCProps } from "@/types";
 import { Info } from "lucide-react";
 import { ReactNode } from "react";
+import CoinTitle from "./ui/coinTitle";
 
+const CurrentPriceGraph: FCProps<{
+  position: number;
+  amount: string;
+}> = ({ position, amount }) => (
+  <div className=" grow flex flex-col justify-center">
+    <div className="relative">
+      <div className="w-full h-1.5 bg-graphGradient "></div>
+      <div
+        style={{ left: `${position}%` }}
+        className={`text-center -translate-x-1/2 absolute`}
+      >
+        <div>▲</div>
+        <div>{amount}</div>
+      </div>
+    </div>
+  </div>
+);
 const FundamentalMetricData: FCProps<{
   metricName: string;
   data: ReactNode;
@@ -24,7 +42,41 @@ const PerformanceCard = () => {
   return (
     <div className="w-full bg-card text-primaryText py-4 pb-6 px-2 md:p-6 my-5">
       <div className="text-2xl font-semibold">Performance</div>
-      <div className="text-xl md:text-lg text-secondaryText font-semibold my-4">
+      <div className="flex gap-5 w-full justify-between mt-8">
+        <div className="text-center">
+          <div>Today's Low</div>
+          <div className="font-semibold mt-1">{coinData?.low_24h}</div>
+        </div>
+        <CurrentPriceGraph
+          position={
+            ((coinData?.usd! - coinData?.low_24h!) * 100) /
+            (coinData?.high_24h! - coinData?.low_24h!)
+          }
+          amount={`$${coinData?.usd}`}
+        />
+        <div className="text-center">
+          <div>Today's High</div>
+          <div className="font-semibold mt-1">{coinData?.high_24h}</div>
+        </div>
+      </div>
+      <div className="flex gap-5 w-full justify-between my-8">
+        <div className="text-center">
+          <div>52W Low</div>
+          <div className="font-semibold mt-1">{coinData?.low_24h}</div>
+        </div>
+        <CurrentPriceGraph
+          position={
+            ((coinData?.usd! - coinData?.low_24h!) * 100) /
+            (coinData?.high_24h! - coinData?.low_24h!)
+          }
+          amount={`$${coinData?.usd}`}
+        />
+        <div className="text-center">
+          <div>52W High</div>
+          <div className="font-semibold mt-1">{coinData?.high_24h}</div>
+        </div>
+      </div>
+      <div className="text-xl md:text-lg text-secondaryText font-semibold my-4 mt-12">
         Fundamentals
         <Info size={20} className="ml-2 inline" />
       </div>

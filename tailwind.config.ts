@@ -83,6 +83,7 @@ const config = {
         ctaGradient: "var(--cta-gradient)",
         blueGreenGradient: "var(--blue-green-gradient)",
         yellowOrangeGradient: "var(--yellow-orange-gradient)",
+        graphGradient: "var(--graph-gradient)",
       },
     },
   },

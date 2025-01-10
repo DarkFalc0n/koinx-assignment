@@ -18,7 +18,10 @@ const PriceChangeIndicator: FCProps<{ change: number }> = ({
         className
       )}
     >
-      <div>{isUpTrend ? "▲" : "▼"}</div> <div>{truncatedChange}%</div>
+      <div className="flex flex-col justify-center mr-1 -translate-y-0.5">
+        {isUpTrend ? "▲" : "▼"}
+      </div>
+      <div>{truncatedChange}%</div>
     </div>
   );
 };

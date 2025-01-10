@@ -16,10 +16,15 @@ const GetStarted = () => {
       <SecondaryButton
         height={48}
         width={300}
-        className="mx-auto mt-5 md:mt-3 items-center"
+        className="mx-auto mt-5 md:mt-3 items-center group"
       >
         Get Started for FREE
-        <ArrowRight size={20} className="ml-2 inline" />
+        <div className="flex flex-col justify-center">
+          <ArrowRight
+            size={20}
+            className="ml-2 inline group-hover:translate-x-1 transition-all"
+          />
+        </div>
       </SecondaryButton>
     </div>
   );

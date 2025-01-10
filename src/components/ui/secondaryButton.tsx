@@ -8,11 +8,11 @@ const SecondaryButton: FCProps<{ height: number; width: number }> = ({
   return (
     <button
       className={cn(
-        "w-[250px] h-[50px] text-primaryText bg-card rounded-[8px] font-semibold py-2 px-6 flex flex-col justify-center",
+        "secondarybuttongroup w-[250px] h-[50px] text-primaryText bg-card rounded-[8px] font-semibold py-2 px-6 flex flex-col justify-center",
         className
       )}
     >
-      <div>{children}</div>
+      <div className="flex">{children}</div>
     </button>
   );
 };

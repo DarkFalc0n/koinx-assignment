@@ -8,6 +8,7 @@ import Image from "next/image";
 import CoinTitle from "@/components/ui/coinTitle";
 import PriceChangeIndicator from "@/components/ui/priceChangeIndicator";
 import Recommendations from "@/components/recommendations";
+import { Skeleton } from "@/components/ui/skeleton";
 
 const CoinPage = ({ params }: { params: { coin_id: string } }) => {
   const { setCoinId, coinData } = useCryptoCurrency();
@@ -36,9 +37,10 @@ const CoinPage = ({ params }: { params: { coin_id: string } }) => {
       </div>
     </div>
   ) : (
-    <div className="w-full text-tertiaryText h-[700px] bg-card p-6 flex flex-col text-center justify-center">
-      LOADING...
-    </div>
+    // <div className="w-full text-tertiaryText h-[700px] bg-card p-6 flex flex-col text-center justify-center">
+    //   LOADING...
+    // </div>
+    <Skeleton className="w-full bg-slate-200 h-[700px]" />
   );
 };
 

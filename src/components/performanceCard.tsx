@@ -45,7 +45,7 @@ const PerformanceCard = () => {
       <div className="text-2xl font-semibold">Performance</div>
       <div className="flex gap-3 w-full justify-between mt-8">
         <div className="text-center md:w-28 w-16">
-          <div>Today's Low</div>
+          <div>Today&apos;s Low</div>
           <div className="font-semibold mt-1">{coinData?.low_24h}</div>
         </div>
         <CurrentPriceGraph
@@ -56,7 +56,7 @@ const PerformanceCard = () => {
           amount={`$${coinData?.usd}`}
         />
         <div className="text-center md:w-28 w-16">
-          <div>Today's High</div>
+          <div>Today&apos;s High</div>
           <div className="font-semibold mt-1">{coinData?.high_24h}</div>
         </div>
       </div>

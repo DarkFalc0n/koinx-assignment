@@ -14,11 +14,11 @@ const AboutCrypto = () => {
       </div>
       <div>
         {coinData.name}&apos;s price today is US${coinData?.usd}, with a 24-hour
-        trading volume of ${coinData?.usd_24h_vol}. {coinData.symbol} is{" "}
-        {coinData?.usd_24h_change}% in the last 24 hours. It is currently -7.70%
-        from its 7-day all-time high of $18,366.66, and 3.40% from its 7-day
-        all-time low of $16,394.75. {coinData.symbol} has a circulating supply
-        of 19.24 M {coinData.symbol}
+        trading volume of ${coinData?.usd_24h_vol.toFixed(2)}. {coinData.symbol}{" "}
+        is {coinData?.usd_24h_change.toFixed(3)}% in the last 24 hours. It is
+        currently -7.70% from its 7-day all-time high of $18,366.66, and 3.40%
+        from its 7-day all-time low of $16,394.75. {coinData.symbol} has a
+        circulating supply of 19.24 M {coinData.symbol}
         and a max supply of 21 M {coinData.symbol}.
       </div>
       <div className="text-xl md:text-lg text-secondaryText font-semibold my-4">

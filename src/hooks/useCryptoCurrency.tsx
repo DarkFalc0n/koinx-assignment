@@ -1,6 +1,6 @@
 "use client";
 import { FCProps } from "@/types";
-import React, { ReactNode, createContext, useContext, useEffect } from "react";
+import React, { createContext, useContext, useEffect } from "react";
 
 type ICryptoCurrencyData = {
   symbol: string;
@@ -15,6 +15,15 @@ type ICryptoCurrencyData = {
   inr_market_cap: number;
   inr_24h_vol: number;
   inr_24h_change: number;
+  ath: number;
+  ath_change: number;
+  ath_date: Date;
+  atl: number;
+  atl_change: number;
+  atl_date: Date;
+  high_24h: number;
+  low_24h: number;
+  trading_volume: number;
 }; //TODO: sanitize data
 
 interface ICryptoCurrencyContext {
@@ -59,6 +68,15 @@ export const CryptoCurrencyContextProvider: FCProps = ({ children }) => {
         inr_market_cap: marketData[coinId!].inr_market_cap,
         inr_24h_vol: marketData[coinId!].inr_24h_vol,
         inr_24h_change: marketData[coinId!].inr_24h_change,
+        ath: coinData.market_data.ath.usd,
+        ath_change: coinData.market_data.ath_change_percentage.usd,
+        ath_date: new Date(coinData.market_data.ath_date.usd),
+        atl: coinData.market_data.atl.usd,
+        atl_change: coinData.market_data.atl_change_percentage.usd,
+        atl_date: new Date(coinData.market_data.atl_date.usd),
+        high_24h: coinData.market_data.high_24h.usd,
+        low_24h: coinData.market_data.low_24h.usd,
+        trading_volume: coinData.market_data.total_volume.usd,
       };
       setCoinData(data);
     } catch (error) {

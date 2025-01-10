@@ -1,6 +1,7 @@
 "use client";
 import AboutCrypto from "@/components/aboutCrypto";
 import GetStarted from "@/components/getStarted";
+import PerformanceCard from "@/components/performanceCard";
 import Recommendations from "@/components/recommendations";
 import SentimentCard from "@/components/sentimentCard";
 import TeamCard from "@/components/teamCard";
@@ -8,7 +9,7 @@ import Tokenomics from "@/components/tokenomics";
 import TrendingCoins from "@/components/trendingCoins";
 import { CryptoCurrencyContextProvider } from "@/hooks/useCryptoCurrency";
 import { TrendingCurrencyContextProvider } from "@/hooks/useTrendingCurrency";
-import React, { use } from "react";
+import React from "react";
 
 export default function CryptocurrenciesLayout({
   children,
@@ -22,6 +23,7 @@ export default function CryptocurrenciesLayout({
           <div className="md:flex-row flex-col flex justify-between gap-5">
             <div className="grow min-h-10">
               {children}
+              <PerformanceCard />
               <SentimentCard />
               <AboutCrypto />
               <Tokenomics />

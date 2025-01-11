@@ -20,7 +20,7 @@ const Recommendations = () => {
             trendingCurrency.map((curr, index) => {
               return (
                 <CarouselItem
-                  className="md:basis-1/5 md:w-1/6 basis-[75%] w-1/2"
+                  className="md:basis-1/4 md:w-1/6 basis-[80%] w-1/2"
                   key={index}
                 >
                   <RecommendationCard {...curr} />
@@ -38,7 +38,7 @@ const Recommendations = () => {
             trendingCurrency.map((curr, index) => {
               return (
                 <CarouselItem
-                  className="md:basis-1/5 md:w-1/6 basis-[75%] w-1/2"
+                  className="md:basis-1/4 md:w-1/6 basis-[80%] w-1/2"
                   key={index}
                 >
                   <RecommendationCard {...curr} />

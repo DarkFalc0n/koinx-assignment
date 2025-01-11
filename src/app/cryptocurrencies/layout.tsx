@@ -9,7 +9,9 @@ import Tokenomics from "@/components/tokenomics";
 import TrendingCoins from "@/components/trendingCoins";
 import { CryptoCurrencyContextProvider } from "@/hooks/useCryptoCurrency";
 import { TrendingCurrencyContextProvider } from "@/hooks/useTrendingCurrency";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import React from "react";
+import { tabsData } from "@/lib/constants/tabs";
 
 export default function CryptocurrenciesLayout({
   children,
@@ -23,6 +25,22 @@ export default function CryptocurrenciesLayout({
           <div className="md:flex-row flex-col flex justify-between gap-5">
             <div className="md:flex-grow">
               {children}
+              <Tabs
+                defaultValue="overview"
+                className="md:w-full overflow-x-scroll no-scrollbar my-5"
+              >
+                <TabsList>
+                  {tabsData.map((tab) => (
+                    <TabsTrigger
+                      value={tab.value}
+                      key={tab.value}
+                      className="text-base"
+                    >
+                      {tab.displayName}
+                    </TabsTrigger>
+                  ))}
+                </TabsList>
+              </Tabs>
               <PerformanceCard />
               <SentimentCard />
               <AboutCrypto />
